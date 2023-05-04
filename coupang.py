@@ -4,6 +4,7 @@ from db import dbConect, insertDB
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+import time
 
 
 def coupang():
@@ -22,6 +23,8 @@ def coupang():
     dbConect()
     
     for i in range(2, 10):
+        time.sleep(1)
+        
         if(i==2 or i > 6):
             page_xpath = '//*[@id="searchOptionForm"]/div[2]/div[2]/div[5]/span[2]/a[' + str(i) + ']'
         else:
@@ -43,4 +46,3 @@ def coupang():
     print(coll_name + "done")
         
     driver.close()
-    

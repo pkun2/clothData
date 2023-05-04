@@ -5,5 +5,5 @@ import time
 
 mushinsa()
 naver()
-time.sleep(1)
+time.sleep(2)
 coupang()
